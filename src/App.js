@@ -14,6 +14,8 @@ function App() {
     <Main/>
     <Features/>
     <Footer/>
+    <Calendar/>
+    <Details/>
   </>
   )
 }
