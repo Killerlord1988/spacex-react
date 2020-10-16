@@ -5,9 +5,9 @@ import FetchData from '../../service/FetchData'
 
 import Main from '../Main/Main';
 
-const Calendar = () => {
+const fetchData = new FetchData();
 
-	const fetchData = new FetchData();
+const Calendar = () => {
 
 	const [data, setData] = useState([]);
 
@@ -15,6 +15,7 @@ const Calendar = () => {
 		fetchData.getLaunches()
 			.then(launches => setData(launches));
 	}, []);
+	console.log(data);
 	return (
 		<>
 			<Main/>
