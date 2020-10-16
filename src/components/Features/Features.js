@@ -2,6 +2,9 @@ import React from 'react';
 import RelaxWrapper from 'react-rellax-wrapper';
 import './features.css';
 
+import Main from '../Main/Main';
+
+
 const rocketImages = {
 	'Falcon 1': 'falcon-1',
 	'Falcon 9': 'falcon-9',
@@ -12,7 +15,9 @@ const rocketImages = {
 const Features = ({name, height, diameter, mass, payload_weights: payloadWeghts, description}) => {
 
 	return (
-	<section className="features">
+		<>
+		<Main/>
+			<section className="features">
 		<h2 className="features-title">
 			{name} <br/>Overview
 		</h2>
@@ -25,7 +30,7 @@ const Features = ({name, height, diameter, mass, payload_weights: payloadWeghts,
 				<thead>
 					<tr>
 						<td className="table-column">HEIGHT</td>
-	<td className="table-column">{height.meters} m/ {height.feet} ft</td>
+						<td className="table-column">{height.meters} m/ {height.feet} ft</td>
 					</tr>
 					<tr>
 						<td className="table-column">DIAMETER</td>
@@ -59,6 +64,7 @@ const Features = ({name, height, diameter, mass, payload_weights: payloadWeghts,
 			</article>
 		</div>
 	</section>
+		</>
   )}
   
   export default Features;
