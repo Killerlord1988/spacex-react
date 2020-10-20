@@ -35,7 +35,7 @@ class App extends React.Component{
     })
     .then(data => data.find(item => item.name === this.state.rocket))
     .then(rocketFeatures => this.setState({rocketFeatures}))
-  console.log(this.state.rocketFeatures);
+  // console.log(this.state.rocketFeatures);
 
   }
 
@@ -65,13 +65,17 @@ class App extends React.Component{
           <Features {...this.state.rocketFeatures}/>}
         </Route>
 
-        <Route path='/calendar'>
+        {/* <Route path='/calendar'>
           <Calendar/>
-        </Route>
+        </Route> */}
 
-        <Route path='/details'>
+        <Route path='/calendar' component={Calendar}/>
+
+        {/* <Route path='/details'>
           <Details/>
-        </Route>
+        </Route> */}
+
+        <Route path='/details/:id' component={Details}/>
 
         {this.state.company && <Footer {...this.state.company}/>}
       </BrowserRouter>

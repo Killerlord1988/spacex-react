@@ -33,7 +33,7 @@ const Header = (props) => (
         <NavLink exact to="/" className="item-link">Home</NavLink>
       </li>
       <li className="item">
-        <NavLink to="calendar" 
+        <NavLink to="/calendar" 
           className="item-link"
           activeClassName="active">Calendar</NavLink>
       </li>
