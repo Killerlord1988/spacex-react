@@ -8,13 +8,10 @@ const video = {
   other: 'space',
 }
 
-const Main = ({rocket}) => (
+const Main = ({rocket, name}) => (
 <section className="main">
-      <h1 className="title">
-        {rocket}
-      </h1>
-
-      <div className="video-container">
+      <h1 className="title">{name || rocket}</h1>
+      {rocket && <div className="video-container">
         <video 
           className="video"
           autoPlay loop muted
@@ -22,7 +19,7 @@ const Main = ({rocket}) => (
           video[rocket] : video.other}.mp4`}>
 
         </video>
-      </div>
+      </div>}
     </section>
 )
 
